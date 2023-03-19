@@ -35,6 +35,7 @@ class LinearConvection2D:
 
     def animate(self, i):
         self.ax.clear()
+        self.ax.set_zlim([0, 2])
         self.ax.set_title("2D Linear Convection")
         p = self.ax.plot_surface(self.X, self.Y, self.u[:, :, i], cmap=cm.viridis)
         return p,
